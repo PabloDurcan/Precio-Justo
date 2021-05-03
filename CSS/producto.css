@@ -1,0 +1,300 @@
+.carta-container{
+    height: 100vh;
+}
+
+.carta{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../Imgs/fondo.png');
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.imagen{
+    width: 15rem;
+    height: 22rem;
+    background-image: url('../Imgs/zapatillas.png');
+    background-size: cover;
+    background-position: center;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 1600px){
+    .imagen{
+        margin-left: 1rem;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .carta{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        font-size: 3rem;
+    }
+
+    .carta-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .descr-imagen{
+        color: white;
+        width: 90%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descr-linea1{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-top: 0.5rem;
+    }
+
+    .descr-linea2{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        margin-bottom: 5rem;
+    }
+
+    .pregunta{
+        display: flex;
+        width: 100%;
+        font-size: 3rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .opciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .opciones button{
+        width: 70%;
+        font-size: 2rem;
+        border-radius: 5px;
+    }
+
+    .opciones button:focus{
+        background: green;
+    }
+
+    .Btns-abajo-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Btns-abajo{
+        width: 85%;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Btns-abajo button{
+        font-size: 2rem;
+        padding: 0.9rem;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 1367px) and (orientation: landscape){
+    .imagen{
+        margin-left: 1rem;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .carta{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        font-size: 1.3rem;
+    }
+
+    .carta-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .descr-imagen{
+        color: white;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .descr-linea1{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .descr-linea2{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        margin-bottom: 1rem;
+    }
+
+    .pregunta{
+        display: flex;
+        width: 100%;
+        font-size: 1.2rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .opciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 0.3rem;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .opciones button{
+        width: 70%;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .opciones button:focus{
+        background: green;
+    }
+
+    .Btns-abajo-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Btns-abajo{
+        width: 85%;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Btns-abajo button{
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+    .imagen{
+        margin-top: 1rem;
+        width: 90%;
+        height: 40vh;
+        margin-left: 0;
+    }
+
+    .carta{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+    }
+
+    .carta-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .descr-imagen{
+        color: white;
+        height: auto;
+        width: 90%;
+        margin-top: 1.5rem;
+    }
+
+    .descr-linea1{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .descr-linea2{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        margin-bottom: 1rem;
+    }
+
+    .pregunta{
+        display: flex;
+        width: 100%;
+        font-size: 1.2rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .opciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 0.3rem;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .opciones button{
+        width: 70%;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .opciones button:focus{
+        background: green;
+    }
+
+    .Btns-abajo-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Btns-abajo{
+        width: 85%;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Btns-abajo button{
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        border-radius: 5px;
+    }
+}

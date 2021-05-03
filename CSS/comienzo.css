@@ -1,0 +1,13 @@
+.pagina-comienzo{
+    display: none;
+    flex-direction: column;
+    color: white;
+}
+
+.pagina-comienzo h2{
+    font-size: 2rem;
+}
+
+.inicio{
+    margin: 0.7rem;
+}

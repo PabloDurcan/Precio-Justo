@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Precio Justo</title>
+    <link rel="stylesheet" href="CSS/inicio.css">
+    <link rel="stylesheet" href="CSS/comienzo.css">
+    <link rel="shortcut icon" href="Imgs/euro.png" />
+    <link rel="stylesheet" href="CSS/producto.css">
+</head>
+<body>
+    <!--------------------------MODELO DE PRODUCTO------------------------>
+    <div class="carta-container" style="display: none;" id="producto">
+        <div class="carta">
+            <div class="imagen">
+                <div class="imagendentro">
+                    
+                </div>
+            </div>
+            <div class="descr-imagen">
+                <div class="descr-linea1">
+                    <h4>TIEMPO: 00 s</h4>
+                    <h4>RONDA: 1</h4>
+                </div>
+                <div class="descr-linea2">
+                    <h4>PRODUCTO: <span style="background: red;">zapatillas</span></h4>
+                </div>
+                <div class="pregunta">
+                    <h4>¿CUÁNTO CUESTA <span style="background: red;">PRODUCTO</span>?:</h4>
+                </div>
+                <div class="opciones">
+                    <button> a) 50.99</button>
+                    <button> b) 50.99</button>
+                    <button> c) 50.99</button>
+                    <button> d) 50.99</button>
+                </div>
+                <div class="Btns-abajo-container">
+                    <div class="Btns-abajo">
+                        <button style="background: lightblue;">Atrás</button>
+                        <button style="background: lightgreen;">Siguiente</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+    <div class="wrapper" id="wrapper">
+        <div class="pagina-inicio" id="P-inicio">
+
+            <div class="Titulo-container">
+                <h1 class="Titulo-inicio">EL PRECIO JUSTO</h1>
+            </div>
+            <div class="Btns-inicio">
+                <button class="Btn-comenzar" onclick="comenzarJuego()">COMENZAR</button>
+                <button class="Btn-instruccion" id="myBtn">CÓMO JUGAR</button>
+            </div>
+
+        </div>
+
+        <div class="pagina-comienzo" id="P-comienzo">
+            <h2>NÚMERO DE RONDAS</h2>
+            <br><br>
+            
+                <button class="Btn-comenzar inicio" onclick="prueba()">10 rondas</button>
+                <button class="Btn-comenzar inicio">15 rondas</button>
+                <button class="Btn-comenzar inicio">20 rondas</button>
+           
+        </div>
+    </div>
+
+
+    <!-- The Modal INSTRUCCIONES -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-cabecera">
+                <h3>INSTRUCCIONES</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-instrucciones">
+                <p>Dale al botón comenzar para iniciar una nueva partida.</p>
+                <br>
+                <p>EN CONSTRUCCION: Puedes elegir el número de rondas que quieras jugar entre las opciones disponibles.</p>
+                <br>
+                <p>EN CONSTRUCCION: Puedes elegir entre los diferentes filtros o no elegir ninguno.</p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="JS/modal_instrucciones.js"></script>
+<script src="JS/comienzo.js"></script>
+</body>
+</html>
