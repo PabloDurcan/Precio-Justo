@@ -22,7 +22,7 @@
 }
 
 
-@media (max-width: 1600px){
+@media (max-width: 1900px){
     .imagen{
         margin-left: 1rem;
         width: 90%;
@@ -67,7 +67,7 @@
     .pregunta{
         display: flex;
         width: 100%;
-        font-size: 3rem;
+        font-size: 2.7rem;
         align-items: center;
         justify-content: center;
         margin-bottom: 1.5rem;
@@ -86,7 +86,7 @@
 
     .opciones button{
         width: 70%;
-        font-size: 2rem;
+        font-size: 1.7rem;
         border-radius: 5px;
     }
 
@@ -108,7 +108,7 @@
     }
 
     .Btns-abajo button{
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 0.9rem;
         border-radius: 5px;
     }
@@ -135,7 +135,7 @@
 
     .descr-imagen{
         color: white;
-        height: auto;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -290,6 +290,7 @@
         margin-top: 0.7rem;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 0.7rem;
     }
 
     .Btns-abajo button{
