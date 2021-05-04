@@ -2,3 +2,136 @@ body{
     background-image: url('../Imgs/fondoGrande.png');
     color: white;
 }
+
+@media (max-width: 1900px){
+    .wrapper-terminar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 75vh;
+    }
+    
+    .resultados{
+        font-size: 3rem;
+        text-decoration: underline;
+    }
+    
+    .wrapper-terminar h4{
+        font-size: 3rem;
+    }
+
+    .barra-puntuacion{
+        width: 50%;
+        height: 2rem;
+        margin-top: 2rem;
+        background: black;
+        border-radius: 4px;
+    }
+
+    .barra-puntuacion1{
+        height: 2rem;
+        border-radius: 4px;
+        background: orange;
+    }
+    }
+
+    @media (max-width: 1600px){
+        .wrapper-terminar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 75vh;
+        }
+        
+        .resultados{
+            font-size: 3rem;
+            text-decoration: underline;
+        }
+        
+        .wrapper-terminar h4{
+            font-size: 3rem;
+        }
+    
+        .barra-puntuacion{
+            width: 50%;
+            height: 2rem;
+            margin-top: 2rem;
+            background: black;
+            border-radius: 4px;
+        }
+
+        .barra-puntuacion1{
+            height: 2rem;
+            border-radius: 4px;
+            background: orange;
+        }
+        }
+    
+@media (max-width: 900px) and (orientation: landscape){
+        .wrapper-terminar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 70vh;
+            margin-top: 2rem;
+        }
+        
+        .resultados{
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        
+        .wrapper-terminar h4{
+            font-size: 1.5rem;
+        }
+
+        .barra-puntuacion{
+            width: 50%;
+            height: 2rem;
+            margin-top: 1rem;
+            background: black;
+            border-radius: 4px;
+        }
+
+        .barra-puntuacion1{
+            height: 2rem;
+            border-radius: 4px;
+            background: orange;
+        }
+    }
+@media (max-width: 1024px) and (orientation: portrait){
+    .wrapper-terminar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 55vh;
+        margin-top: 2rem;
+    }
+    
+    .resultados{
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+    
+    .wrapper-terminar h4{
+        font-size: 1.7rem;
+    }
+
+    .barra-puntuacion{
+        width: 70%;
+        height: 2rem;
+        margin-top: 2rem;
+        background: black;
+        border-radius: 4px;
+    }
+
+    .barra-puntuacion1{
+        height: 2rem;
+        border-radius: 4px;
+        background: orange;
+    }
+    }

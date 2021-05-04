@@ -3,7 +3,7 @@ let fallos = 0;
 
 function terminar() {
     document.getElementById("carta-container").style.display = "none";
-    document.getElementById("terminar-div").style.display = "inline";
+    document.getElementById("terminar-div").style.display = "flex";
 
 
     for (let i = 0; i < respuestas.length; i++) {
@@ -20,8 +20,15 @@ function terminar() {
             
         }
         document.getElementById("fallos").textContent = fallos;
-        
     }
 
+    let total_respuestas = aciertos + fallos;
 
+    let total_puntuacion = (aciertos * 100) / total_respuestas;
+    total_puntuacion.toFixed(2);
+
+    document.getElementById("puntuacion").textContent = total_puntuacion;
+
+    document.getElementById("barra-puntuacion").style.width = `${total_puntuacion}%`;
+    
  }

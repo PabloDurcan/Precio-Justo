@@ -18,7 +18,7 @@ body{
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        background-image: url('../Imgs/fondo.png');
+        background-image: url('../Imgs/fondoGrande.png');
     }
 
     .Titulo-container{

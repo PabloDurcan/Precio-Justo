@@ -1,5 +1,5 @@
-let aciertos = 0;
-let fallos = 0;
+let aciertos = 6;
+let fallos = 9;
 
 function terminar() { 
     for (let i = 0; i < respuestas.length; i++) {

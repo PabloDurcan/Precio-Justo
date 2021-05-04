@@ -33,11 +33,21 @@ const chaqueta = new Producto("1300","500","2500","5800","Chaqueta Gucci","Produ
 const play5 = new Producto("499.99","399.99","325.22","599.99","Play 5","Producto","Imgs/play5.png");
 const mando_play5 = new Producto("69.90","55.50","75.99","40.99","Mando Play 5","Producto","Imgs/mandops5.png");
 const coche_m2 = new Producto("76.650","86.890","103.999","60.789","BMW M2 Competition","Producto","Imgs/bmw_m2.png");
-const grafica_3090 = new Producto("1549","700","1000","2200","RTX 3090 Founders Edition","Producto","Imgs/3090_RTX.png");
+const grafica_3090 = new Producto("1549","700","1000","2200","RTX 3090 Founders Edition","Producto","Imgs/3090_rtx.png");
 const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Producto","Imgs/twitch_prime.png");
 const tv_qled = new Producto("9999","5555","2500","8590","TV Samsung QLED 85' 8K","Producto","Imgs/tv_samsung.png");
 const iphone12 = new Producto("1589","799","997","1896","iPhone 12 ProMax 512GB","Producto","Imgs/iphone12.png");
 const roombas9 = new Producto("1499","799","2200","563","Roomba s9+","Producto","Imgs/roombas9.png");
+const pistachos = new Producto("3.60","1.50","2.30","4.59","Pistachos Mercadona","Producto","Imgs/pistachos.png");
+const bugatti_chiron = new Producto("2.400.000","1.000.000","3.500.000","5.000.000","Bugatti Chiron","Producto","Imgs/bugatti_chiron.png");
+const kindle = new Producto("109.99","74.99","150.50","50.99","Kindle Paperwhite","Producto","Imgs/kindle.png");
+const cafe = new Producto("1.47","2.30","1.23","0.95","Café Medio en Bar","Producto","Imgs/cafe.png");
+const ipadpro = new Producto("1620","750","2200","965","iPad Pro 2020 1TB","Producto","Imgs/ipad.png");
+const frisbee = new Producto("9.99","5.99","2.99","14.99","Frisbee Decatlhon","Producto","Imgs/frisbee.png");
+const bici_cervelo = new Producto("4799","2350","12650","7500","Cervelo Caledonia Ultegra","Producto","Imgs/bici_cervelo.png");
+
+
+
 //const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
 //const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
 
@@ -67,7 +77,7 @@ function shuffle(array) {
 
 
 
- const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9]);
+ const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9,pistachos,kindle,bugatti_chiron,cafe,frisbee,bici_cervelo,ipadpro]);
  let n = 0;
  var respuestas = [];
  var precio_bueno = [];
