@@ -10,43 +10,13 @@
     <link rel="stylesheet" href="prueba.css">
 </head>
 <body>
-    <button onclick="crear()">crear</button>
-    <div class="carta-container" style="display: none;" id="carta-container">
-        <div class="carta">
-            <div class="imagen" id="imagen">
-                <div class="imagendentro">
-                    
-                </div>
-            </div>
-            <div class="descr-imagen">
-                <div class="descr-linea1">
-                    <h4>TIEMPO: 00 s</h4>
-                    <h4>RONDA: 1</h4>
-                </div>
-                <div class="descr-linea2">
-                    <h4>PRODUCTO: <span style="background: red;" id="nom-producto"></span></h4>
-                </div>
-                <div class="pregunta">
-                    <h4>¿CUÁNTO CUESTA <span style="background: red;" id="nom-producto2"></span>?:</h4>
-                </div>
-                <div class="opciones">
-                    <button> a) <span id="precioA"></span></button>
-                    <button> b) <span id="precioB"></span></button>
-                    <button> c) <span id="precioC"></span></button>
-                    <button> d) <span id="precioD"></span></button>
-                </div>
-                <div class="Btns-abajo-container">
-                    <div class="Btns-abajo">
-                        <button style="background: lightblue;">Atrás</button>
-                        <button style="background: lightgreen;">Siguiente</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        
-    </div>
     
+    <div class="wrapper-terminar">
+        <p>Aciertos: <span id="aciertos"></span> </p>
+        <p>Fallos: <span id="fallos"></span> </p>
+        <p>PUNTUACIÓN: </p>
+    </div>
+
     <script src="prueba.js"></script>
 </body>
 </html>
