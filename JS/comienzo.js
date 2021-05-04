@@ -3,20 +3,7 @@ function comenzarJuego(){
     document.getElementById("P-comienzo").style.display = "flex";
 }
 
-function Rondas10() { 
-    document.getElementById("wrapper").style.display = "none";
-    document.getElementById("carta-container").style.display = "flex";
- }
 
- function Rondas15() { 
-    document.getElementById("wrapper").style.display = "none";
-    document.getElementById("producto").style.display = "flex";
- }
-
- function Rondas20() { 
-    document.getElementById("wrapper").style.display = "none";
-    document.getElementById("producto").style.display = "flex";
- }
 
  /*-------------CREAMOS LA CLASE PRODUCTO---------------*/
  class Producto{
@@ -32,22 +19,19 @@ function Rondas10() {
 }
 /*-----------CREAMOS LOS OBJETOS A TRAVES DE LA CLASE CREADA ANTERIORMENTE----------------*/
 const zapatillas = new Producto("12.99","22.59","30.99","21.14","zapatillas","Imgs/zapatillas.png");
-
 const thor = new Producto("25.99","22.59","30.99","15.14","thor","Imgs/thor.png");
-
 const cascos = new Producto("75.99","101.68","120.99","125.88","cascos","Imgs/cascos.png");
-
 const silla = new Producto("12.99","22.59","30.99","21.14","silla","Imgs/silla.png");
-
 const poco = new Producto("229.99","300.45","259.99","350.99","poco","Imgs/poco.png");
-
 const ketchup = new Producto("5.99","2.99","4.56","3.34","ketchup","Imgs/ketchup.png");
-
 const romeo = new Producto("33.900","44.000","40.000","55.000","Alfa Romeo Guilia","Imgs/romeo.png");
-
 const cupra = new Producto("20.000","25.000","30.000","35.000","Leon Cupra","Imgs/cupra.png");
+const ordenador = new Producto("500","750","1200","1500","Ordenador Gaming","Imgs/ordenador.png");
+const boli = new Producto("1.99","0.50","3.40","1.40","Boli Bic","Imgs/boli.png");
+const chaqueta = new Producto("50","75","95","105","Chaqueta Gucci","Imgs/chaqueta.png");
 
-const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo];
+
+const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta];
 
 //Funcion para crear un arreglo con elementos aleatorios, esto servira para que, cada vez que se empieza una partida nueva el orden de los productos que salga sea aleatoriamente, ademas, no se puede repetir ningun producto. ------Fisher–Yates shuffle algorithm-------.
 function shuffle(array) {
@@ -68,13 +52,16 @@ function shuffle(array) {
    return array;
  }
  
- const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo]);
+ const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta]);
  let n = 0;
  var respuestas = [];
  var precio_bueno = [];
 
 x = undefined;
 
+document.getElementById("rondas10").addEventListener("click", function() {
+   ronda = 5;
+});
  function continuar(){
     document.getElementById("wrapper").style.display = "none";
     document.getElementById("carta-container").style.display = "flex";
@@ -119,18 +106,22 @@ x = undefined;
       }
    
       n++;
-   
       document.getElementById("num-ronda").innerHTML = n;
       
       /*Cuando el contador de rondas (o clicks) sea mayor al numero de productos que hay el boton siguiente se convierte en un boton Terminar para poder llegar a una pagina donde nos diga los aciertos/fallos y la puntuacion final*/
-      if (n > 8) {
-         respuestas.push(x);
-         document.getElementById("Btn-siguiente").style.display = "none";
-         document.getElementById("Btn-terminar").style.display = "flex";
-         document.getElementById("num-ronda").innerHTML = "8";
+      try {
+         if (n > ronda) {
+            //respuestas.push(x);
+            document.getElementById("Btn-siguiente").style.display = "none";
+            document.getElementById("Btn-terminar").style.display = "flex";
+            document.getElementById("num-ronda").innerHTML = ronda;
+         }
+      } catch (error) {
       }
-   
+      
+      
       console.log(respuestas);
+      //console.log(ronda);
       x = undefined;
     }
 
@@ -153,3 +144,20 @@ function precioD(){
    x = document.getElementById("precioD").innerHTML;
 }
 
+
+
+
+function Rondas10() {
+   document.getElementById("wrapper").style.display = "none";
+   document.getElementById("carta-container").style.display = "flex";
+}
+
+function Rondas15() { 
+   document.getElementById("wrapper").style.display = "none";
+   document.getElementById("producto").style.display = "flex";
+}
+
+function Rondas20() { 
+   document.getElementById("wrapper").style.display = "none";
+   document.getElementById("producto").style.display = "flex";
+}

@@ -7,7 +7,6 @@
 }
 
 body{
-    background: ;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -72,6 +71,7 @@ body{
   /* Modal Content */
   .modal-content {
     background-color: #fefefe;
+    color: black;
     margin: auto;
     width: 80%;
     border-radius: 3px;
@@ -117,7 +117,9 @@ body{
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        background-image: url('../Imgs/fondo.png');
+        background-image: url('../Imgs/fondoGrande.png');
+        background-size: cover;
+        background-position: center;
     }
 
     .Titulo-container{
@@ -157,7 +159,7 @@ body{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
+    padding-top: 15vh; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */

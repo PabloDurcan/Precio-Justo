@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/comienzo.css">
     <link rel="shortcut icon" href="Imgs/euro.png" />
     <link rel="stylesheet" href="CSS/producto.css">
+    <link rel="stylesheet" href="CSS/terminar.css">
 </head>
 <body>
     <!----------PÁGINA DE INICIO---------------->
@@ -29,11 +30,19 @@
             <h2>NÚMERO DE RONDAS</h2>
             <br><br>
             
-                <button class="Btn-comenzar inicio" onclick="continuar()">10 rondas</button>
-                <button class="Btn-comenzar inicio" onclick="Rondas15()">15 rondas</button>
-                <button class="Btn-comenzar inicio" onclick="Rondas20()">20 rondas</button>
+                <button class="Btn-comenzar inicio" onclick="continuar()" id="rondas10">10 rondas</button>
+                <button class="Btn-comenzar inicio" onclick="continuar()">15 rondas</button>
+                <button class="Btn-comenzar inicio" onclick="continuar()">20 rondas</button>
            
         </div>
+
+    </div>
+
+    <!----------TERMINAR---------------->
+    <div style="display: none;" id="terminar-div">
+        <p class="descr-linea1">Aciertos: <span id="aciertos"></span> </p>
+        <p class="descr-linea1">Fallos: <span id="fallos"></span> </p>
+        <p class="descr-linea1">PUNTUACIÓN: </p>
     </div>
 
     <!------------DISEÑO DE CARTAS DE LOS PRODUCTOS------------------>
@@ -53,7 +62,7 @@
                     <h4>PRODUCTO: <span style="background: red;" id="nom-producto"></span></h4>
                 </div>
                 <div class="pregunta">
-                    <h4>¿CUÁNTO CUESTA <span style="background: red;" id="nom-producto2"></span>?:</h4>
+                    <h4 style="text-align: center;">¿CUÁNTO CUESTA <span style="background: red;" id="nom-producto2"></span>?:</h4>
                 </div>
                 <div class="opciones">
                     <button onclick="precioA()"> a) <span id="precioA"></span>€</button>
@@ -74,7 +83,6 @@
     </div>
 
 
-    <!----------PÁGINA DE INICIO---------------->
     
 
 

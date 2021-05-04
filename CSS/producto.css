@@ -5,7 +5,7 @@
 .carta{
     width: 100%;
     height: 100vh;
-    background-image: url('../Imgs/fondo.png');
+    background-image: url('../Imgs/fondoGrande.png');
     border-radius: 5px;
     display: flex;
     align-items: center;
