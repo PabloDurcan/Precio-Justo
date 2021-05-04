@@ -18,20 +18,26 @@ function comenzarJuego(){
    }
 }
 /*-----------CREAMOS LOS OBJETOS A TRAVES DE LA CLASE CREADA ANTERIORMENTE----------------*/
-const zapatillas = new Producto("12.99","22.59","30.99","21.14","zapatillas","Imgs/zapatillas.png");
-const thor = new Producto("25.99","22.59","30.99","15.14","thor","Imgs/thor.png");
-const cascos = new Producto("75.99","101.68","120.99","125.88","cascos","Imgs/cascos.png");
-const silla = new Producto("12.99","22.59","30.99","21.14","silla","Imgs/silla.png");
-const poco = new Producto("229.99","300.45","259.99","350.99","poco","Imgs/poco.png");
-const ketchup = new Producto("5.99","2.99","4.56","3.34","ketchup","Imgs/ketchup.png");
-const romeo = new Producto("33.900","44.000","40.000","55.000","Alfa Romeo Guilia","Imgs/romeo.png");
-const cupra = new Producto("20.000","25.000","30.000","35.000","Leon Cupra","Imgs/cupra.png");
-const ordenador = new Producto("500","750","1200","1500","Ordenador Gaming","Imgs/ordenador.png");
-const boli = new Producto("1.99","0.50","3.40","1.40","Boli Bic","Imgs/boli.png");
-const chaqueta = new Producto("50","75","95","105","Chaqueta Gucci","Imgs/chaqueta.png");
+const zapatillas = new Producto("45.50","30.99","40.99","25.50","Botas Futbol","Imgs/zapatillas.png");
+const thor = new Producto("15.95","45.59","30.99","22.50","Thor","Imgs/thor.png");
+const cascos = new Producto("97.95","110.50","120.99","75.99","Logitech Pro X","Imgs/cascos.png");
+const silla = new Producto("222.57","123.66","95.99","175.45","Silla Gaming","Imgs/silla.png");
+const poco = new Producto("174.84","300.45","259.99","200.99","Poco X3 NFC","Imgs/poco.png");
+const ketchup = new Producto("2.88","1.50","4.56","3.34","Ketchup Heinz","Imgs/ketchup.png");
+const romeo = new Producto("33.900","43.300","25.800","55.000","Alfa Romeo Guilia Super","Imgs/romeo.png");
+const cupra = new Producto("40.900","25.500","30.000","35.000","Leon Cupra","Imgs/cupra.png");
+const ordenador = new Producto("1500","750","1200","2800","Ordenador Gaming","Imgs/ordenador.png");
+const boli = new Producto("0.36","1.60","2.20","0.99","Boli Bic","Imgs/boli.png");
+const chaqueta = new Producto("1300","500","2500","5800","Chaqueta Gucci","Imgs/chaqueta.png");
+const play5 = new Producto("499.99","399.99","325.22","599.99","Play 5","Imgs/play5.png");
+const mando_play5 = new Producto("69.90","55.50","75.99","40.99","Mando Play 5","Imgs/mandops5.png");
+const coche_m2 = new Producto("76.650","86.890","103.999","60.789","BMW M2 Competition","Imgs/bmw_m2.png");
+const grafica_3090 = new Producto("1549","700","1000","2200","RTX 3090 Founders Edition","Imgs/3090_RTX.png");
+const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
+
+const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5];
 
 
-const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta];
 
 //Funcion para crear un arreglo con elementos aleatorios, esto servira para que, cada vez que se empieza una partida nueva el orden de los productos que salga sea aleatoriamente, ademas, no se puede repetir ningun producto. ------Fisher–Yates shuffle algorithm-------.
 function shuffle(array) {
@@ -52,16 +58,32 @@ function shuffle(array) {
    return array;
  }
  
- const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta]);
+
+
+
+ const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime]);
  let n = 0;
  var respuestas = [];
  var precio_bueno = [];
 
 x = undefined;
 
+
+//Funciones para implementar cuantas rondas (productos) se quieren jugar
 document.getElementById("rondas10").addEventListener("click", function() {
-   ronda = 5;
+   ronda = 10;
 });
+
+document.getElementById("rondas15").addEventListener("click", function() {
+   ronda = 15;
+});
+
+document.getElementById("rondas20").addEventListener("click", function() {
+   ronda = 20;
+});
+
+
+/*FUNCION PRINCIPAL QUE VA A EJECUTARSE CUANDO SE LE DE A SIGUIENTE O AL NUMERO DE RONDAS QUE SE QUIERA*/
  function continuar(){
     document.getElementById("wrapper").style.display = "none";
     document.getElementById("carta-container").style.display = "flex";
@@ -97,21 +119,16 @@ document.getElementById("rondas10").addEventListener("click", function() {
       //Este condicional nos sirve para que añada elementos al arreglo respuestas siempre y cuando x tenga un valor, es decir, no sea undefined
       if (x != undefined) {
          respuestas.push(x);
-         
       }
-         
-         console.log(precio_bueno);
-         //console.log(x);
       } catch (error) {
       }
-   
+
       n++;
       document.getElementById("num-ronda").innerHTML = n;
-      
+   
       /*Cuando el contador de rondas (o clicks) sea mayor al numero de productos que hay el boton siguiente se convierte en un boton Terminar para poder llegar a una pagina donde nos diga los aciertos/fallos y la puntuacion final*/
       try {
          if (n > ronda) {
-            //respuestas.push(x);
             document.getElementById("Btn-siguiente").style.display = "none";
             document.getElementById("Btn-terminar").style.display = "flex";
             document.getElementById("num-ronda").innerHTML = ronda;
@@ -119,9 +136,6 @@ document.getElementById("rondas10").addEventListener("click", function() {
       } catch (error) {
       }
       
-      
-      console.log(respuestas);
-      //console.log(ronda);
       x = undefined;
     }
 
@@ -144,20 +158,3 @@ function precioD(){
    x = document.getElementById("precioD").innerHTML;
 }
 
-
-
-
-function Rondas10() {
-   document.getElementById("wrapper").style.display = "none";
-   document.getElementById("carta-container").style.display = "flex";
-}
-
-function Rondas15() { 
-   document.getElementById("wrapper").style.display = "none";
-   document.getElementById("producto").style.display = "flex";
-}
-
-function Rondas20() { 
-   document.getElementById("wrapper").style.display = "none";
-   document.getElementById("producto").style.display = "flex";
-}
