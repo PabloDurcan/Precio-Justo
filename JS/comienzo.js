@@ -7,33 +7,39 @@ function comenzarJuego(){
 
  /*-------------CREAMOS LA CLASE PRODUCTO---------------*/
  class Producto{
-   constructor(precioBueno,precioX,precioY,precioJ,nombre,url){
+   constructor(precioBueno,precioX,precioY,precioJ,nombre,categoria,url){
       /*Hay 4 tipos de precios, 3 que seran los falsos y 1 que sera el verdadero: "precioBueno"*/ 
        this.precioBueno = precioBueno;
        this.precioX = precioX;
        this.precioY = precioY;
        this.precioJ = precioJ;
        this.nombre = nombre;
+       this.categoria = categoria;
        this.url = url;
    }
 }
 /*-----------CREAMOS LOS OBJETOS A TRAVES DE LA CLASE CREADA ANTERIORMENTE----------------*/
-const zapatillas = new Producto("45.50","30.99","40.99","25.50","Botas Futbol","Imgs/zapatillas.png");
-const thor = new Producto("15.95","45.59","30.99","22.50","Thor","Imgs/thor.png");
-const cascos = new Producto("97.95","110.50","120.99","75.99","Logitech Pro X","Imgs/cascos.png");
-const silla = new Producto("222.57","123.66","95.99","175.45","Silla Gaming","Imgs/silla.png");
-const poco = new Producto("174.84","300.45","259.99","200.99","Poco X3 NFC","Imgs/poco.png");
-const ketchup = new Producto("2.88","1.50","4.56","3.34","Ketchup Heinz","Imgs/ketchup.png");
-const romeo = new Producto("33.900","43.300","25.800","55.000","Alfa Romeo Guilia Super","Imgs/romeo.png");
-const cupra = new Producto("40.900","25.500","30.000","35.000","Leon Cupra","Imgs/cupra.png");
-const ordenador = new Producto("1500","750","1200","2800","Ordenador Gaming","Imgs/ordenador.png");
-const boli = new Producto("0.36","1.60","2.20","0.99","Boli Bic","Imgs/boli.png");
-const chaqueta = new Producto("1300","500","2500","5800","Chaqueta Gucci","Imgs/chaqueta.png");
-const play5 = new Producto("499.99","399.99","325.22","599.99","Play 5","Imgs/play5.png");
-const mando_play5 = new Producto("69.90","55.50","75.99","40.99","Mando Play 5","Imgs/mandops5.png");
-const coche_m2 = new Producto("76.650","86.890","103.999","60.789","BMW M2 Competition","Imgs/bmw_m2.png");
-const grafica_3090 = new Producto("1549","700","1000","2200","RTX 3090 Founders Edition","Imgs/3090_RTX.png");
-const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
+const zapatillas = new Producto("45.50","30.99","40.99","25.50","Botas Futbol","Producto","Imgs/zapatillas.png");
+const thor = new Producto("15.95","45.59","30.99","22.50","Thor","Producto","Imgs/thor.png");
+const cascos = new Producto("97.95","110.50","120.99","75.99","Logitech Pro X","Producto","Imgs/cascos.png");
+const silla = new Producto("222.57","123.66","95.99","175.45","Silla Gaming","Producto","Imgs/silla.png");
+const poco = new Producto("174.84","300.45","259.99","200.99","Poco X3 NFC","Producto","Imgs/poco.png");
+const ketchup = new Producto("2.88","1.50","4.56","3.34","Ketchup Heinz","Producto","Imgs/ketchup.png");
+const romeo = new Producto("33.900","43.300","25.800","55.000","Alfa Romeo Guilia Super","Producto","Imgs/romeo.png");
+const cupra = new Producto("40.900","25.500","30.000","35.000","Leon Cupra","Producto","Imgs/cupra.png");
+const ordenador = new Producto("1500","750","1200","2800","Ordenador Gaming","Producto","Imgs/ordenador.png");
+const boli = new Producto("0.36","1.60","2.20","0.99","Boli Bic","Producto","Imgs/boli.png");
+const chaqueta = new Producto("1300","500","2500","5800","Chaqueta Gucci","Producto","Imgs/chaqueta.png");
+const play5 = new Producto("499.99","399.99","325.22","599.99","Play 5","Producto","Imgs/play5.png");
+const mando_play5 = new Producto("69.90","55.50","75.99","40.99","Mando Play 5","Producto","Imgs/mandops5.png");
+const coche_m2 = new Producto("76.650","86.890","103.999","60.789","BMW M2 Competition","Producto","Imgs/bmw_m2.png");
+const grafica_3090 = new Producto("1549","700","1000","2200","RTX 3090 Founders Edition","Producto","Imgs/3090_RTX.png");
+const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Producto","Imgs/twitch_prime.png");
+const tv_qled = new Producto("9999","5555","2500","8590","TV Samsung QLED 85' 8K","Producto","Imgs/tv_samsung.png");
+const iphone12 = new Producto("1589","799","997","1896","iPhone 12 ProMax 512GB","Producto","Imgs/iphone12.png");
+const roombas9 = new Producto("1499","799","2200","563","Roomba s9+","Producto","Imgs/roombas9.png");
+//const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
+//const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
 
 const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5];
 
@@ -61,7 +67,7 @@ function shuffle(array) {
 
 
 
- const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime]);
+ const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9]);
  let n = 0;
  var respuestas = [];
  var precio_bueno = [];
@@ -106,7 +112,7 @@ document.getElementById("rondas20").addEventListener("click", function() {
       precio_aleatorio = shuffle(precio_aleatorio);
    
       /*Cada vez que hagamos click en Siguiente se creara una nueva "pagina" con los valores de cada producto nuevo, siendo los precios aleatorios*/
-      document.getElementById("nom-producto").innerHTML = recorre_arreglo.nombre;
+      document.getElementById("nom-producto").innerHTML = recorre_arreglo.categoria;
       document.getElementById("nom-producto2").innerHTML = recorre_arreglo.nombre;
    
       document.getElementById("imagen").style.backgroundImage = "url(" + recorre_arreglo.url + ")";
