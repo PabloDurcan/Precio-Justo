@@ -25,6 +25,25 @@
         <h4>PUNTUACIÓN: <span id="puntuacion"></span>/100</h4>
         <div class="barra-puntuacion">
         </div>
+
+        <button class="Btn-instruccion" onclick="mostrarResultados()">VER LOS RESULTADOS</button>
+
+        <table class="tabla" style="display: none;" id="tabla">
+            <tbody id="tblBody">
+                <tr class="fila">
+                    <th>VUELTA</th>
+                    <th>RESPUESTA</th>
+                    <th>PRECIO BUENO</th>
+                    <th></th>
+                </tr>
+                <tr class="fila">
+                </tr>
+            </tbody>
+        </table>
+
+        <p id="correcto" style="display: none;">&#9989;</p>
+        <p id="incorrecto" style="display: none;">&#10062;</p>
+
     </div>
 
     <script src="prueba.js"></script>

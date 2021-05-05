@@ -27,7 +27,6 @@ const poco = new Producto("174.84","300.45","259.99","200.99","Poco X3 NFC","Pro
 const ketchup = new Producto("2.88","1.50","4.56","3.34","Ketchup Heinz","Producto","Imgs/ketchup.png");
 const romeo = new Producto("33.900","43.300","25.800","55.000","Alfa Romeo Guilia Super","Producto","Imgs/romeo.png");
 const cupra = new Producto("40.900","25.500","30.000","35.000","Leon Cupra","Producto","Imgs/cupra.png");
-const ordenador = new Producto("1500","750","1200","2800","Ordenador Gaming","Producto","Imgs/ordenador.png");
 const boli = new Producto("0.36","1.60","2.20","0.99","Boli Bic","Producto","Imgs/boli.png");
 const chaqueta = new Producto("1300","500","2500","5800","Chaqueta Gucci","Producto","Imgs/chaqueta.png");
 const play5 = new Producto("499.99","399.99","325.22","599.99","Play 5","Producto","Imgs/play5.png");
@@ -51,7 +50,7 @@ const bici_cervelo = new Producto("4799","2350","12650","7500","Cervelo Caledoni
 //const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
 //const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
 
-const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5];
+const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,boli,chaqueta,play5,mando_play5];
 
 
 
@@ -77,25 +76,40 @@ function shuffle(array) {
 
 
 
- const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,ordenador,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9,pistachos,kindle,bugatti_chiron,cafe,frisbee,bici_cervelo,ipadpro]);
+ const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9,pistachos,kindle,bugatti_chiron,cafe,frisbee,bici_cervelo,ipadpro]);
  let n = 0;
  var respuestas = [];
  var precio_bueno = [];
 
+ //Este es el arreglo que se va a utilizar en la ultima pagina para poder ver tus resultados finales, sera la primera columna de la tabla que se crea con los resultados, tendra la url de cada una de las imagenes 
+ var arreglo_fotos = [];
+
 x = undefined;
 
-
+arreglo_vuelta = [];
 //Funciones para implementar cuantas rondas (productos) se quieren jugar
 document.getElementById("rondas10").addEventListener("click", function() {
    ronda = 10;
+   for (let i = 0; i < 10 ; i++) {
+      arreglo_vuelta.push(i);
+      console.log(arreglo_vuelta);
+   }
 });
 
 document.getElementById("rondas15").addEventListener("click", function() {
    ronda = 15;
+   for (let i = 0; i < 15 ; i++) {
+      arreglo_vuelta.push(i);
+      console.log(arreglo_vuelta);
+   }
 });
 
 document.getElementById("rondas20").addEventListener("click", function() {
    ronda = 20;
+   for (let i = 0; i < 20 ; i++) {
+      arreglo_vuelta.push(i);
+      console.log(arreglo_vuelta);
+   }
 });
 
 
@@ -118,7 +132,7 @@ document.getElementById("rondas20").addEventListener("click", function() {
       precio_bueno.push(recorre_arreglo.precioBueno);
    
       /*Se crea un array con los precios de cada uno de los productos en el momento de hacer click en siguiente. Segun se crea el array lo haremos aleatorio para que, cada vez que se cree una nueva partida o se añadan productos nuevos no haga falta cambiarlos de lugar*/
-      let precio_aleatorio = [recorre_arreglo.precioBueno,recorre_arreglo.precioX,recorre_arreglo.precioY,recorre_arreglo.precioJ];
+      var precio_aleatorio = [recorre_arreglo.precioBueno,recorre_arreglo.precioX,recorre_arreglo.precioY,recorre_arreglo.precioJ];
       precio_aleatorio = shuffle(precio_aleatorio);
    
       /*Cada vez que hagamos click en Siguiente se creara una nueva "pagina" con los valores de cada producto nuevo, siendo los precios aleatorios*/
@@ -126,7 +140,12 @@ document.getElementById("rondas20").addEventListener("click", function() {
       document.getElementById("nom-producto2").innerHTML = recorre_arreglo.nombre;
    
       document.getElementById("imagen").style.backgroundImage = "url(" + recorre_arreglo.url + ")";
-          
+
+
+      arreglo_fotos.push(recorre_arreglo.url);
+      console.log(arreglo_fotos);
+      
+
       document.getElementById("precioA").innerHTML = precio_aleatorio[0];
       document.getElementById("precioB").innerHTML = precio_aleatorio[1];
       document.getElementById("precioC").innerHTML = precio_aleatorio[2];
@@ -157,6 +176,7 @@ document.getElementById("rondas20").addEventListener("click", function() {
 
 }
 
+
 /*Se crean 4 funciones enlazadas a los cuatro botones que hay en cada producto, dandole a una variable X el valor que tenga cada uno de los botones en el momento que se le da click, luego esa variable X se utilizará para crear un array con las respuestas introducidas por el usuario: respuestas[]*/ 
 function precioA(){
    x = document.getElementById("precioA").innerHTML;
@@ -173,4 +193,3 @@ function precioC(){
 function precioD(){
    x = document.getElementById("precioD").innerHTML;
 }
-

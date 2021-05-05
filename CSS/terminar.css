@@ -3,18 +3,50 @@ body{
     color: white;
 }
 
+.tabla{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    width: 75%;
+    text-align: center;
+}
+
+.fila{
+    font-size: 2rem;
+}
+
+.produc-tabla{
+    height: 8rem;
+    width: 8rem;
+    background: black;
+    display: flex;
+    justify-content: center;
+    background-image: url("Imgs/pistachos.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.celda-imagen{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
 @media (max-width: 1900px){
     .wrapper-terminar{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 75vh;
+        margin-top: 3rem;
     }
     
     .resultados{
         font-size: 3rem;
         text-decoration: underline;
+    }
+
+    .Btn-resultado{
+        margin-top: 2rem;
     }
     
     .wrapper-terminar h4{
@@ -34,6 +66,7 @@ body{
         border-radius: 4px;
         background: orange;
     }
+    
     }
 
     @media (max-width: 1600px){
@@ -42,16 +75,15 @@ body{
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 75vh;
         }
         
         .resultados{
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-decoration: underline;
         }
         
         .wrapper-terminar h4{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     
         .barra-puntuacion{
@@ -75,7 +107,6 @@ body{
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 70vh;
             margin-top: 2rem;
         }
         
@@ -101,6 +132,15 @@ body{
             border-radius: 4px;
             background: orange;
         }
+
+        .tabla{
+            font-size: 1.5rem;
+            width: 90%;
+        }
+
+        .fila{
+            font-size: 1.5rem;
+        }
     }
 @media (max-width: 1024px) and (orientation: portrait){
     .wrapper-terminar{
@@ -108,7 +148,6 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 55vh;
         margin-top: 2rem;
     }
     
@@ -133,5 +172,25 @@ body{
         height: 2rem;
         border-radius: 4px;
         background: orange;
+    }
+
+    .tabla{
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    .fila{
+        font-size: 1rem;
+    }
+
+    .produc-tabla{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .celda-imagen{
+        padding-left: 0;
+        padding-right: 0.5rem;
+        padding-top: 1rem;
     }
     }

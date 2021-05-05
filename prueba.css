@@ -9,6 +9,17 @@
 
 }
 
+.produc-tabla{
+    height: 6rem;
+    width: 6rem;
+    background: black;
+    display: flex;
+    justify-content: center;
+    background-image: url("Imgs/pistachos.png");
+    background-size: cover;
+    background-position: center;
+}
+
 @media (max-width: 1900px){
 .wrapper-terminar{
     display: flex;
@@ -38,6 +49,17 @@
     height: 2rem;
     border-radius: 4px;
     background: orange;
+}
+
+.tabla{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    width: 45%;
+    text-align: center;
+}
+
+.fila{
+    font-size: 2rem;
 }
 }
 
