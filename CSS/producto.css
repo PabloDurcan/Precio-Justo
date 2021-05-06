@@ -303,7 +303,7 @@
     }
 
     .opciones button:focus{
-        background: green;
+        background: rgb(13, 105, 167);
     }
 
     .Btns-abajo-container{

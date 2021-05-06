@@ -27,6 +27,17 @@ document.getElementById("rondas15").addEventListener("click", function() {
    for (let i = 0; i < 15 ; i++) {
       arreglo_vuelta.push(i);
    }
+
+   //Comienzo el intervalo de 60 segundos por ronda
+   idIntervalo = setInterval(() => {
+    if (seg_vuelta == 0) {
+       seg_vuelta = 15;
+       x = "Tiempo";
+       continuar();
+   }
+    seg_vuelta--;
+    document.getElementById("sec-ronda").textContent = seg_vuelta;
+ }, 1000);
 });
 
 document.getElementById("rondas20").addEventListener("click", function() {
@@ -34,4 +45,15 @@ document.getElementById("rondas20").addEventListener("click", function() {
    for (let i = 0; i < 20 ; i++) {
       arreglo_vuelta.push(i);
    }
+
+   //Comienzo el intervalo de 60 segundos por ronda
+   idIntervalo = setInterval(() => {
+    if (seg_vuelta == 0) {
+       seg_vuelta = 15;
+       x = "Tiempo";
+       continuar();
+   }
+    seg_vuelta--;
+    document.getElementById("sec-ronda").textContent = seg_vuelta;
+ }, 1000);
 });

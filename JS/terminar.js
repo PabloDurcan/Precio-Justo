@@ -131,5 +131,4 @@ function ocultarResultados(){
     document.getElementById("tabla").style.display = "none";
     
     solo1++;
-
 }

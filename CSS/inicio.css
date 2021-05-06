@@ -16,23 +16,24 @@ body{
     justify-content: flex-start;
     position: absolute;
     align-items: center;
-    height: 52.8px;
+    height: 95px;
 }
 
 .Btn-musica{
-    height: 52.8px;
+    height: 95px;
+    width: 95px;
 }
 
 .Btn-container{
-    height: 52.8px;
-    width: 52px;
+    height: 95px;
+    width: 95px;
     z-index: 0;
     position: absolute;
 }
 
 .linea{
     height: 2px;
-    width: 55px;
+    width: 95px;
     background: rgb(153, 8, 8);
     transform: rotateY(0deg) rotate(45deg);
 }
@@ -233,4 +234,42 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
+}
+@media (max-width: 900px) and (orientation: landscape){
+    .Btn-musica{
+        height: 70px;
+        width: 70px;
+    }
+
+    .Btn-container{
+        height: 70px;
+    }
+
+    .nav-bar{
+        height: 70px;
+    }
+
+    .linea{
+        width: 70px;
+    }
+}
+
+
+@media (max-width: 1024px) and (orientation: portrait){
+    .Btn-musica{
+        height: 70px;
+        width: 70px;
+    }
+
+    .Btn-container{
+        height: 70px;
+    }
+
+    .nav-bar{
+        height: 70px;
+    }
+
+    .linea{
+        width: 70px;
+    }
 }
