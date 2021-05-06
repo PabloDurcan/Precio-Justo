@@ -164,11 +164,16 @@ body{
             font-size: 1.5rem;
             width: 90%;
             border-spacing: 0rem;
+            justify-content: center;
 
         }
 
         .fila{
             font-size: 1.5rem;
+        }
+
+        .fila th{
+            padding: 0 0.5rem;
         }
 
         .nav-bar{
@@ -217,6 +222,7 @@ body{
         font-size: 1.2rem;
         width: 90%;
         border-spacing: 0rem;
+        justify-content: center;
 
     }
 
