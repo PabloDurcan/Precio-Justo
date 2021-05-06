@@ -112,6 +112,8 @@ body{
             font-size: 2rem;
             width: 90%;
             border-spacing: 1rem;
+            display: flex;
+            justify-content: center;
         }
 
         .produc-tabla{
