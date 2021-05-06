@@ -34,19 +34,18 @@ function terminar() {
  }
 
 
+//Dos variables que tienen el valor del tick y de la cruz
 let correcto = document.getElementById("correcto").innerHTML;
 let incorrecto = document.getElementById("incorrecto").innerHTML;
 
+//Variable que nos servira para que solo se muestre 1 vez la tabla de las respuestas, solo se va a ejecutar el display de la tabla cuando la variable valga 0
 let solo1 = 0;
 
+//Iniciamos un arreglo que va a tener ticks o cruces en sus elementos a traves de un condicional creado posteriormente
 let arreglo_emojis = [];
 
 
-
-
-
 function mostrarResultados(){
-    console.log(respuestas.length,precio_bueno.length,arreglo_vuelta.length);
     
     if (solo1 == 0) {
         
@@ -59,20 +58,21 @@ function mostrarResultados(){
           }
         }
 
-        
-      document.getElementById("tabla").style.display = "";
-      solo1++;
+
+        document.getElementById("tabla").style.display = "";
+        solo1++;
   
    //Iniciamos una variable que sea el propio cuerpo de la tabla
    let tblBody = document.getElementById("tblBody");
   
+   //Dependiendo del numero de rondas que el usuario quiera jugar se ejecutara un i numero de veces este bucle, es decir, el bucle de crear 1 fila y 4 columnas. Si queremos 10 rondas habra 10 filas con 4 columnas cada una
    for (var i = 0; i < arreglo_vuelta.length; i++) {
       
       //Creamos las filas, en este caso solo queremos crear una, por lo tanto el bucle es hasta 1
       for (let y = 0; y < 1; y++) {
           let fila = document.createElement("tr");
           
-          //Creamos las celdas, en nuestro caso vamos a crear 3 diferentes porque queremos que tengan textos diferentes, creando 3 celdas en una misma fila, es decir una fila y 3 columnas
+          //Creamos las celdas, en nuestro caso vamos a crear 4 diferentes porque queremos que tengan textos diferentes, creando 4 celdas en una misma fila, es decir una fila y 4 columnas
           //Primera celda, primera columna
           for (let j = 0; j < 1; j++) {
               let celda = document.createElement("td");

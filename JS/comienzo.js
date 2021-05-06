@@ -42,16 +42,18 @@ const bugatti_chiron = new Producto("2.400.000","1.000.000","3.500.000","5.000.0
 const kindle = new Producto("109.99","74.99","150.50","50.99","Kindle Paperwhite","Producto","Imgs/kindle.png");
 const cafe = new Producto("1.47","2.30","1.23","0.95","Café Medio en Bar","Producto","Imgs/cafe.png");
 const ipadpro = new Producto("1620","750","2200","965","iPad Pro 2020 1TB","Producto","Imgs/ipad.png");
+const bici_cervelo = new Producto("5500","1999","12000","750","Bici Cervelo Ultegra","Producto","Imgs/bici_cervelo.png");
 const frisbee = new Producto("9.99","5.99","2.99","14.99","Frisbee Decatlhon","Producto","Imgs/frisbee.png");
-const bici_cervelo = new Producto("4799","2350","12650","7500","Cervelo Caledonia Ultegra","Producto","Imgs/bici_cervelo.png");
-
-
-
-//const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
-//const twitch_prime = new Producto("3.99","5.99","12.50","1.99","Suscripcion Mensual Twitch Prime","Imgs/twitch_prime.png");
-
-const todos_productos = [zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,boli,chaqueta,play5,mando_play5];
-
+const raton_ergonomico = new Producto("89.99","102.35","20.99","49.99","Logitech MX Vertical","Producto","Imgs/raton_ergonomico.png");
+const nike_sb = new Producto("54.95","99.99","22.35","68.90","Nike SB","Producto","Imgs/nikesb.png");
+const cine_espectador = new Producto("4.50","7.30","1.80","9.90","Entrada Día del Espectador","Producto","Imgs/cine.png");
+const silla_ergonomica = new Producto("267.00","150.99","75.96","450.98","Silla ergonómica ARKO","Producto","Imgs/silla_ergonomica.png");
+const punetazo = new Producto("GRATIS","GRATISS","GRATISSS","GRATISSSS","Puñetazo en la Cabesa","Producto","Imgs/puño.png");
+const gorra_nike = new Producto("24.95","35.95","15.95","10.99","Gorra Nike Sportswear","Producto","Imgs/gorra_nike.png");
+const archivador = new Producto("3.07","4.95","1.85","12.98","Archivador Amazon","Producto","Imgs/archivador.png");
+const mancuernas = new Producto("139.99","80.99","202.95","50.99","Juego de Mancuernas","Producto","Imgs/mancuernas.png");
+const lego = new Producto("193.35","50.66","108.94","82.99","Lego Cazafantasmas","Producto","Imgs/mancuernas.png");
+const comic = new Producto("3.200.000","5.300.000","550.000","1.000.000","Ation Comics #1","Producto","Imgs/comic.png");
 
 
 //Funcion para crear un arreglo con elementos aleatorios, esto servira para que, cada vez que se empieza una partida nueva el orden de los productos que salga sea aleatoriamente, ademas, no se puede repetir ningun producto. ------Fisher–Yates shuffle algorithm-------.
@@ -74,9 +76,7 @@ function shuffle(array) {
  }
  
 
-
-
- const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9,pistachos,kindle,bugatti_chiron,cafe,frisbee,bici_cervelo,ipadpro]);
+ const productos_aleatorios = shuffle([zapatillas,thor,cascos,silla,poco,ketchup,cupra,romeo,boli,chaqueta,play5,mando_play5,coche_m2,grafica_3090,twitch_prime,tv_qled,iphone12,roombas9,pistachos,kindle,bugatti_chiron,cafe,frisbee,bici_cervelo,ipadpro,raton_ergonomico,nike_sb,cine_espectador,silla_ergonomica,punetazo,gorra_nike,archivador]);
  let n = 0;
  var respuestas = [];
  var precio_bueno = [];
@@ -92,7 +92,6 @@ document.getElementById("rondas10").addEventListener("click", function() {
    ronda = 10;
    for (let i = 0; i < 10 ; i++) {
       arreglo_vuelta.push(i);
-      console.log(arreglo_vuelta);
    }
 });
 
@@ -143,8 +142,7 @@ document.getElementById("rondas20").addEventListener("click", function() {
 
 
       arreglo_fotos.push(recorre_arreglo.url);
-      console.log(arreglo_fotos);
-      
+
 
       document.getElementById("precioA").innerHTML = precio_aleatorio[0];
       document.getElementById("precioB").innerHTML = precio_aleatorio[1];

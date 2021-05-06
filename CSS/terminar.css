@@ -148,7 +148,7 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 0rem;
     }
     
     .resultados{
@@ -192,5 +192,10 @@ body{
         padding-left: 0;
         padding-right: 0.5rem;
         padding-top: 1rem;
+    }
+
+    .nav-bar{
+        margin-top: 0;
+        position: absolute;
     }
     }

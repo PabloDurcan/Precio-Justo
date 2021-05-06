@@ -10,6 +10,33 @@ body{
     font-family: 'Rubik', sans-serif;
 }
 
+.nav-bar{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    position: absolute;
+    align-items: center;
+    height: 52.8px;
+}
+
+.Btn-musica{
+    height: 52.8px;
+}
+
+.Btn-container{
+    height: 52.8px;
+    width: 52px;
+    z-index: 0;
+    position: absolute;
+}
+
+.linea{
+    height: 2px;
+    width: 55px;
+    background: rgb(153, 8, 8);
+    transform: rotateY(0deg) rotate(45deg);
+}
+
 @media (max-width: 2000px){
     .wrapper{
         height: 100vh;
@@ -41,7 +68,7 @@ body{
         border-radius: 10px;
         outline: none;
         border: 2px solid black;
-        transition: .5s;
+        transition: .3s;
     }
 
     .Btn-comenzar:hover{

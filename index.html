@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="CSS/terminar.css">
 </head>
 <body>
+    <div class="nav-bar">
+        <div class="Btn-container">
+            <button onclick="musicaPlay()" class="Btn-musica">&#127925</button>
+        </div>
+        <div class="linea" style="z-index: 2;" id="tachar">
+        </div>
+    </div>
     <!----------PÁGINA DE INICIO---------------->
     <div class="wrapper" id="wrapper">
         <div class="pagina-inicio" id="P-inicio">
@@ -127,16 +134,18 @@
             <div class="modal-instrucciones">
                 <p>Dale al botón comenzar para iniciar una nueva partida.</p>
                 <br>
-                <p>EN CONSTRUCCION: Puedes elegir el número de rondas que quieras jugar entre las opciones disponibles.</p>
+                <p>Puedes elegir el número de rondas que quieras jugar entre las opciones disponibles.</p>
                 <br>
-                <p>EN CONSTRUCCION: Puedes elegir entre los diferentes filtros o no elegir ninguno.</p>
+                <p>En cada nueva partida tanto los productos como sus precios saldrán ALEATORIAMENTE</p>
             </div>
         </div>
     </div>
 
+    <audio value="PLAY" src="Audio/tema.mp3" id="audio" loop></audio>
 
 <script src="JS/modal_instrucciones.js"></script>
 <script src="JS/comienzo.js"></script>
 <script src="JS/terminar.js"></script>
+<script src="JS/musica.js"></script>
 </body>
 </html>
