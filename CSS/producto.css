@@ -103,14 +103,14 @@
 
     .Btns-abajo{
         width: 85%;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         display: flex;
         justify-content: flex-end;
     }
 
     .Btns-abajo button{
         font-size: 1.7rem;
-        padding: 0.9rem;
+        padding: 0.5rem;
         border-radius: 5px;
     }
 }

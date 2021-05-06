@@ -6,6 +6,7 @@ function terminar() {
     document.getElementById("terminar-div").style.display = "flex";
 
 
+
     for (let i = 0; i < respuestas.length; i++) {
         if (respuestas[i] == precio_bueno[i]) {
             aciertos++;
@@ -46,7 +47,11 @@ let arreglo_emojis = [];
 
 
 function mostrarResultados(){
-    
+    document.getElementById("terminar-div").style.height = "auto";
+    document.getElementById("btn-ver").style.display = "none";
+    document.getElementById("btn-ocultar").style.display = "flex";
+
+
     if (solo1 == 0) {
         
         //Bucle que forma un array con los emojis correcto o incorrecto, sus valores van a estar en la misma posicion de elemento que la de los arreglos de respuesta y de precioBueno
@@ -59,7 +64,6 @@ function mostrarResultados(){
         }
 
 
-        document.getElementById("tabla").style.display = "";
         solo1++;
   
    //Iniciamos una variable que sea el propio cuerpo de la tabla
@@ -109,6 +113,23 @@ function mostrarResultados(){
       }
    }
 
+
   }
+
+  document.getElementById("tabla").style.display = "flex";
+
+
+}
+
+function ocultarResultados(){
+    document.getElementById("btn-ocultar").style.display = "none";
+    document.getElementById("btn-ver").style.display = "flex";
+
+    document.getElementById("terminar-div").style.height = "100vh";
+
+    
+    document.getElementById("tabla").style.display = "none";
+    
+    solo1++;
 
 }

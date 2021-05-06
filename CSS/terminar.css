@@ -1,5 +1,8 @@
 body{
     background-image: url('../Imgs/fondoGrande.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
     color: white;
 }
 
@@ -8,6 +11,10 @@ body{
     margin-top: 2rem;
     width: 75%;
     text-align: center;
+}
+
+.wrapper-terminar{
+    height: 100vh;
 }
 
 .fila{
@@ -75,6 +82,7 @@ body{
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin-top: 0rem;
         }
         
         .resultados{
@@ -99,6 +107,24 @@ body{
             border-radius: 4px;
             background: orange;
         }
+
+        .tabla{
+            font-size: 2rem;
+            width: 90%;
+            border-spacing: 1rem;
+        }
+
+        .produc-tabla{
+            height: 13rem;
+            width: 13rem;
+        }
+
+        .fila{
+            font-size: 2.7rem;
+
+        }
+
+        
         }
     
 @media (max-width: 900px) and (orientation: landscape){
@@ -107,12 +133,13 @@ body{
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 2rem;
+            margin-top: 0.5rem;
         }
         
         .resultados{
             font-size: 1.5rem;
             text-decoration: underline;
+            margin-top: 0;
         }
         
         .wrapper-terminar h4{
@@ -136,10 +163,21 @@ body{
         .tabla{
             font-size: 1.5rem;
             width: 90%;
+            border-spacing: 0rem;
+
         }
 
         .fila{
             font-size: 1.5rem;
+        }
+
+        .nav-bar{
+            margin-top: 0;
+        }
+
+        .produc-tabla{
+            height: 9rem;
+            width: 9rem;
         }
     }
 @media (max-width: 1024px) and (orientation: portrait){
@@ -154,6 +192,7 @@ body{
     .resultados{
         font-size: 1.5rem;
         text-decoration: underline;
+        margin-top: 2.8rem;
     }
     
     .wrapper-terminar h4{
@@ -177,6 +216,8 @@ body{
     .tabla{
         font-size: 1.2rem;
         width: 90%;
+        border-spacing: 0rem;
+
     }
 
     .fila{
