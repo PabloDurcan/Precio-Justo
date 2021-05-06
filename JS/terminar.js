@@ -5,7 +5,7 @@ function terminar() {
     document.getElementById("carta-container").style.display = "none";
     document.getElementById("terminar-div").style.display = "flex";
 
-
+    clearInterval(idIntervalo);
 
     for (let i = 0; i < respuestas.length; i++) {
         if (respuestas[i] == precio_bueno[i]) {

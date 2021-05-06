@@ -86,30 +86,6 @@ function shuffle(array) {
 
 x = undefined;
 
-arreglo_vuelta = [];
-//Funciones para implementar cuantas rondas (productos) se quieren jugar
-document.getElementById("rondas10").addEventListener("click", function() {
-   ronda = 10;
-   for (let i = 0; i < 10 ; i++) {
-      arreglo_vuelta.push(i);
-   }
-});
-
-document.getElementById("rondas15").addEventListener("click", function() {
-   ronda = 15;
-   for (let i = 0; i < 15 ; i++) {
-      arreglo_vuelta.push(i);
-      console.log(arreglo_vuelta);
-   }
-});
-
-document.getElementById("rondas20").addEventListener("click", function() {
-   ronda = 20;
-   for (let i = 0; i < 20 ; i++) {
-      arreglo_vuelta.push(i);
-      console.log(arreglo_vuelta);
-   }
-});
 
 
 /*FUNCION PRINCIPAL QUE VA A EJECUTARSE CUANDO SE LE DE A SIGUIENTE O AL NUMERO DE RONDAS QUE SE QUIERA*/
@@ -121,7 +97,8 @@ document.getElementById("rondas20").addEventListener("click", function() {
     if (x == undefined && n != 0) {
        alert("Tienes que elegir una opción.");
     }else{
-
+      seg_vuelta = 15;
+      document.getElementById("sec-ronda").textContent = seg_vuelta;
       //Hacemos este try porque sino no deja añadir el ultimo elemento 
        try {
 

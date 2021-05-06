@@ -123,8 +123,6 @@ body{
             font-size: 2.7rem;
 
         }
-
-        
         }
     
 @media (max-width: 900px) and (orientation: landscape){
@@ -165,7 +163,6 @@ body{
             width: 90%;
             border-spacing: 0rem;
             justify-content: center;
-
         }
 
         .fila{

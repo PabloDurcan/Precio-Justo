@@ -134,6 +134,10 @@
         width: 60%;
         height: 70vh;
     }
+
+    .carta-container{
+        background-image: url('../Imgs/fondoGrande.png');
+    }
     
 }
 
@@ -206,7 +210,7 @@
     }
 
     .opciones button:focus{
-        background: green;
+        background: rgb(36, 96, 175);
     }
 
     .Btns-abajo-container{
